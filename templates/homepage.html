@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>Login</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="cover.css" rel="stylesheet">
+		
+	<!--FONTS FROM GOOGLE FONTS-->
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+	<!--Styling the html document-->
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	body {
+		font-family: 'Merriweather', serif;
+	}
+
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+
+	/* Set a style for all buttons */
+	button {
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	button:hover {
+		opacity: 0.8;
+	}
+
+	/*aligning the text and buttons to the center*/
+	.classifier {
+		text-align: center;
+		padding: 70px;
+	}
+
+	.classifier button {
+		transition-duration: 0.4s;
+		box-shadow: 0 6px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		margin: 50px 30px 5px 5px; 
+	}
+	.classifier button:hover {
+		color: white;
+	}
+
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+	}
+
+	/* Center the image and position the close button */
+	.imgcontainer {
+		text-align: center;
+		margin: 24px 0 12px 0;
+		position: relative;
+	}
+
+	img.avatar {
+		width: 40%;
+		border-radius: 50%;
+	}
+
+	.container {
+		padding: 16px;
+		color: black;
+		text-align: left;
+	}
+
+	span.psw {
+		float: right;
+		padding-top: 16px;
+	}
+
+	/* The Modal (background) */
+	.modal1 {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto;/* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 60px;
+	}
+
+	.modal2 {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto;/* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 60px;
+	}
+
+
+	/* Modal Content/Box */
+	.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 30%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button (x) */
+	.close {
+		position: absolute;
+		right: 25px;
+		top: 0;
+		color: #000;
+		font-size: 35px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: red;
+		cursor: pointer;
+	}
+
+	/* Add Zoom Animation */
+	.animate {
+		-webkit-animation: animatezoom 0.6s;
+		animation: animatezoom 0.6s
+	}
+
+	@-webkit-keyframes animatezoom {
+		from {-webkit-transform: scale(0)} 
+		to {-webkit-transform: scale(1)}
+	}
+		
+	@keyframes animatezoom {
+		from {transform: scale(0)} 
+		to {transform: scale(1)}
+	}
+
+	/* Change styles for span and cancel button on extra small screens */
+	@media screen and (max-width: 300px) {
+		span.psw {
+		   display: block;
+		   float: none;
+		}
+		.cancelbtn {
+		   width: 100%;
+		}
+	}
+
+	</style>
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+			<div class="cover-container">
+
+          
+				<div class="inner cover">
+            
+					<div class="classifier">
+			
+			
+						<!--HTML CODE-->
+						<h2 style="word-spacing:10px; font-family: 'Merriweather', serif; font-size: 40px;">CALENDER MANAGER</h2>
+						<p class="lead" style="padding: 30px;">Application for managing the calender.</p>
+						
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+						<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"> Register </button>
+						<!--HTML CODE CONTINUED-->
+					
+						<!--LOGIN DETAILS-->
+						<div id="id01" class="modal1">
+						<!--Login Form TAG-->
+						<form class="modal-content animate" action="/userlogin" method="POST">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<img src="login.png" alt="Avatar" class="avatar" style="height:auto; width:auto;">
+						</div>
+
+						<div class="container">
+							<label for="email"><b>Email</b></label>
+							<input type="text" placeholder="Enter Username" name="email" required>
+
+							<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required>
+				
+							<button type="submit">Login</button>
+						</div>
+						</form>
+						</div>
+
+						<!--REGISTER DETAILS-->
+						<div id="id02" class="modal2">
+		  
+						<form class="modal-content animate" action="/userregistration" method="POST">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<img src="login.png" alt="Avatar" class="avatar" style="height:auto; width:auto">
+						</div>
+
+						<div class="container">
+							<label for="email"><b>E-mail</b></label>
+							<input type="text" placeholder="Enter mail ID" name="email" required>
+				  
+							<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required>
+			  
+							<button type="submit">Register</button>
+							
+						</div>
+						</form>
+						</div>
+
+						<!--JAVASCRIPT CODE-->
+						<script>
+						// Get the Login Modal
+						var modal1 = document.getElementById('id01');
+
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal1) {
+								modal1.style.display = "none";
+							}
+						}
+						</script>
+
+						<script>
+						// Get the Register Modal
+						var modal2 = document.getElementById('id02');
+
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal2) {
+								modal2.style.display = "none";
+							}
+						}
+						</script>	
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
